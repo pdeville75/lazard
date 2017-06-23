@@ -1,0 +1,4 @@
+services:
+#    lazard_blog.example:
+#        class: Lazard\BlogBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

@@ -1,0 +1,3 @@
+lazard_blog_homepage:
+    path:     /
+    defaults: { _controller: LazardBlogBundle:Default:index }
