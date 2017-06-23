@@ -32,11 +32,13 @@ framework:
     assets: ~
     php_errors:
         log: true
+    translator: { fallbacks: [en] }
 
 # Twig Configuration
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    cache: false
 
 # Doctrine Configuration
 doctrine:
@@ -75,3 +77,18 @@ fos_user:
     from_email:
         address: "lazard@lazard.com"
         sender_name: "User Name"
+
+assetic:
+    debug:          '%kernel.debug%'
+    use_controller: '%kernel.debug%'
+    filters:
+        cssrewrite: ~
+
+# app/config/config.yml
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        # enable the SonataAdminBundle block
+        sonata.admin.block.admin_list:
+            contexts: [admin]
+        # ...
